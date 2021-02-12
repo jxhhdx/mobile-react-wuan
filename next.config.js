@@ -1,8 +1,6 @@
-const resolve = require('path').resolve
-module.exports = {
-    /* config options here */
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-
-        return config
-    },
-}
+const withLess = require('@zeit/next-less')
+module.exports = withLess({
+  webpack(config, options) {
+    return config
+  }
+})
