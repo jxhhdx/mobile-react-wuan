@@ -1,0 +1,64 @@
+// InputItem
+
+.conponent-input{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    height: 56px;
+    border-bottom-width: 1px;
+    border-bottom-color: #eee;
+    border-bottom-style: solid;
+    div {
+        align-items: center;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        width: 50px;
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 35px;
+    }
+    input {
+        margin: 0;
+        border:0;
+        padding: 0;
+        background:none;  
+        outline:none;  
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+// ButtonItem
+.button-item {
+    display: flex;
+    justify-content: center;
+    div {
+        
+        width: 200px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border: 1px solid #6ab1ab;
+        font-size: 16px;
+    }
+    .primary {
+        color: #fff;
+        background-color: #6ab1ab;
+    }
+    .ghost {
+        color: #6ab1ab;
+    }
+    .top {
+        margin-top: 30px;
+    }
+    .botton {
+        margin-top: 14px;
+    }
+}

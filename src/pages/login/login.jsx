@@ -1,4 +1,5 @@
-
+import InputItem from "../../components/InputItem";
+import ButtonItem from "../../components/ButtonItem";
 function Login(props) {
     return (
         <>
@@ -6,6 +7,13 @@ function Login(props) {
                 <img src={'/static/time.png'} />
                 <span>煎饼计划</span>
             </div>
+            <InputItem title="邮箱" placeholder="请输入邮箱"/>
+            <InputItem title="密码" placeholder="请输入密码" type="password"/>
+
+            <ButtonItem text="登录" className="top"/>
+            <ButtonItem text="注册" className="ghost botton"/>
+
+
         </>
     )
 }
