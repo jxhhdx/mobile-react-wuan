@@ -3,7 +3,7 @@ function ButtonItem(props) {
     if(!cn){
         cn = "primary"
     } 
-    if(typeof cn === "string" && !cn.includes("ghost") && !cn.includes("primary") ){
+    if(typeof cn === "string" && !cn.includes("ghost") && !cn.includes("regist") && !cn.includes("white") && !cn.includes("primary") && !cn.includes("none") && !cn.includes("submit") && !cn.includes("user")){
         cn = "primary " + cn 
     }
      

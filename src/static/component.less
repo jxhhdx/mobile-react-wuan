@@ -15,6 +15,7 @@
     border-bottom-width: 1px;
     border-bottom-color: #eee;
     border-bottom-style: solid;
+    align-items: center;
     div {
         align-items: center;
         display: inline-flex;
@@ -33,6 +34,15 @@
         width: 100%;
         font-size: 16px;
     }
+    span {
+        display: block;
+        width: 20px;
+    }
+    .icon-clear {
+        color: #b2b2b2;
+        margin-right: 15px;
+        font-size: 20px;
+    }
 }
 
 // ButtonItem
@@ -40,7 +50,6 @@
     display: flex;
     justify-content: center;
     div {
-        
         width: 200px;
         height: 45px;
         text-align: center;
@@ -52,13 +61,260 @@
         color: #fff;
         background-color: #6ab1ab;
     }
+    .user {
+        color: #fff;
+        background-color: #8fc0a8;
+        border: 0;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+    }
+    .submit {
+        color: #fff;
+        background-color: #8fc0a8;
+        height: 40px;
+        border: 0;
+        line-height: 40px;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
     .ghost {
         color: #6ab1ab;
+    }
+    .regist {
+        background-color: #8fc0a8;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+    .white {
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        border-radius: 3px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .none {
+        border: 0px;
+        color: #ffffff;
     }
     .top {
         margin-top: 30px;
     }
     .botton {
         margin-top: 14px;
+    }
+}
+
+// Head
+.head {
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    z-index: 100;
+    background-color: rgb(143, 192, 168);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 16px;
+    .iconfont {
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        left: 0px;
+    }
+}
+
+.index {
+    border-top: 1px solid #bbbbbb;
+    position: fixed;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: rgb(248, 248, 248);
+    .index-item {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 24px;
+            width: 24px;
+        }
+        span {
+            font-size: 10px;
+            color: rgb(81, 81, 81);
+        }
+        .active {
+            color: rgb(103, 176, 172);
+        }
+    }
+}
+
+// Time 
+@len: 250px;
+.time {
+    margin-top: 25px;
+    width: @len;
+    height: @len;
+    position: relative;
+    .time-day {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .time-day-num {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color: #fff;
+            font-size: 29px;
+            font-weight: 700;
+            .num {
+                flex-grow: 5;
+                text-align: center;
+            }
+            .char {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+        .time-day-show {
+            display: flex;
+            width: 100%;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            div {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+    }
+    
+    .time-circle-border-out {
+        height: @len - 4px;
+        width: @len - 4px;
+        transform: rotate(30deg);
+        position: absolute;
+        .time-circle-border {
+            height: inherit;
+            width: @len - 60px;
+            overflow:hidden;
+            .time-circle1 {
+                width: @len - 6px;
+                height: @len - 6px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+            }
+        }
+    }
+    .time-circle-border-out1 {
+        height: @len - 14px;
+        width: @len - 14px;
+        transform: rotate(10deg);
+        position: absolute;
+        margin-left: 5px;
+        margin-top: 5px;
+        .time-circle-border {
+            height: inherit;
+            width: @len - 70px;
+            overflow:hidden;
+            .time-circle1 {
+                
+                width: @len - 16px;
+                height: @len - 16px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+            }
+        }
+    }
+    .time-circle-border-out2 {
+        height: @len - 24px;
+        width: @len - 24px;
+        transform: rotate(-10deg);
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+        .time-circle-border {
+            height: inherit;
+            width: @len - 80px;
+            overflow:hidden;
+            .time-circle1 {
+                width: @len - 26px;
+                height: @len - 26px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.info-model {
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(143, 192, 168);
+    color: #ffffff;
+    .info-title {
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .info-group {
+        font-size: 14px;
+        padding-left: 20px;
+        margin-top: 13px;
+    }
+}
+
+.submit-info {
+    width: 100%;
+    margin-top: 5px;
+
+}
+
+// Textarea
+.textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+    textarea {
+        height: 48px;
+        width: 100%;
+        outline:none;
+        font-size: 14px;
+        border-color: #e3f1f1;
+        resize: none;
+    }
+    span {
+        padding: 7px 0;
+    }
+}
+.select {
+    
+    .select-leave {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        div {
+            flex-grow: 1;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-gou {
+            color: #6cb3af;
+        }
     }
 }

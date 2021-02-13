@@ -12,6 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html, body, #__next{
+    width: 100%;
+    height: 100%;
+}
 
 // login.jsx
 .login-head {
@@ -36,3 +40,154 @@ code {
     }
 }
 
+
+.regist-input {
+    .conponent-input {
+        div {
+            width: 88px;
+            font-size: 15px;
+            padding-right: 10px;
+            padding-left: 20px;
+        }
+    }
+}
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left,#6ab1ab,#8fc0a8);
+    background-image: linear-gradient(90deg,#6ab1ab,#8fc0a8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    .main-weekly {
+        color: #ffffff;
+        font-size: 22px;
+        width: 251px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .main-group {
+        color: #ffffff;
+        font-size: 14px;
+        margin-top: 17px;
+    }
+    .main-submit {
+        margin-top: 10px;
+    }
+    .main-leave {
+        margin-top: 10px;
+    }
+}
+
+.into-main {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff;
+    .into-title {
+        margin: 0 20px;
+    }
+    i {
+        position: absolute;
+        right: 20px;
+    }
+}
+.into-main-ban {
+    span {
+        color: rgb(146, 146, 146);
+    }
+}
+.global-hr {
+    height: 10px;
+}
+.user-main {
+    .user {
+        margin-top: 80px;
+    }
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    .user-logo {
+        height: 95px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 75px;
+            height: 75px;
+            margin-left: 15px;
+            border-radius: 50%;
+            border: 2px solid #8fc0a8;
+        }
+        span {
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.rename-main {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    .rename-tips {
+        color: rgb(123, 120, 121);
+        font-size: 12px;
+        text-align: center;
+    }
+    .button-item {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        margin-left: -150px;
+    }
+}
+.passwd-main {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    .passwd-tips {
+        color: rgb(123, 120, 121);
+        font-size: 12px;
+        text-align: center;
+    }
+    .conponent-input {
+        div {
+            font-size: 15px;
+            width: 110px;
+            padding-right: 5px;
+        }
+    }
+    .passwd-tips {
+        font-size: 14px;
+        padding: 7px 10px;
+        background-color: #ffffff;
+        text-align: start;
+    }
+    .user {
+        margin-top: 80px;
+    }
+}
+.exit-group {
+    .text {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 80px;
+        h1 {
+            font-size: 21px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}

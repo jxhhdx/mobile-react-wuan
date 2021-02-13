@@ -1,0 +1,51 @@
+{
+  "id": "2373049",
+  "name": "mobile",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5466020",
+      "name": "clear",
+      "font_class": "clear",
+      "unicode": "e710",
+      "unicode_decimal": 59152
+    },
+    {
+      "icon_id": "5901138",
+      "name": "上",
+      "font_class": "shang",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "5901139",
+      "name": "下",
+      "font_class": "xia",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "705668",
+      "name": "钩",
+      "font_class": "gou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "778785",
+      "name": "进入",
+      "font_class": "jinru",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "15907689",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

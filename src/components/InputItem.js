@@ -1,7 +1,7 @@
 function InputItem(props) {
-    const { title, placeholder, type, className } = props
+    const { title,noTitle, placeholder, type, className, clear } = props
     const cn  = className ? className : "";
-
+    console.log("clear", clear);
     function selectInputType(params="text") {
         switch (params) {
             case "password":
@@ -14,8 +14,10 @@ function InputItem(props) {
     }
     return (
         <div className={"conponent-input " + cn}>
-            <div>{title}</div>
+            
+            {noTitle===undefined||noTitle==false?<div>{title}</div>:<span> </span>}
             { selectInputType(type) }
+            {clear===true ? <i className="iconfont icon-clear"/>:"" }
         </div>
     )
 
