@@ -12,11 +12,11 @@ function User(props) {
                 <span>Web前端组</span>
             </div> 
             <div className="global-hr"></div>
-            <Into title="昵称" text="12121"/>
+            <Into href="/rename/rename" title="昵称" text="12121"/>
             <Into title="邮箱" text="igaoxian@foxmail.com" isBack={ false } status={ false }/>
-            <Into title="修改密码" />
-            <Into title="退出分组" />
-            <ButtonItem text="退出登陆" className="user"/>
+            <Into href="/passwd/passwd" title="修改密码" />
+            <Into href="/exitGroup/exitGroup" title="退出分组" />
+            <ButtonItem href="/login/login" text="退出登陆" className="user"/>
             <Index active="2"/>
         </div>
     )

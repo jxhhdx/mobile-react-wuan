@@ -10,8 +10,8 @@ function Login(props) {
             <InputItem title="邮箱" placeholder="请输入邮箱"/>
             <InputItem title="密码" placeholder="请输入密码" type="password"/>
 
-            <ButtonItem text="登录" className="top"/>
-            <ButtonItem text="注册" className="ghost botton"/>
+            <ButtonItem href="/home/home" text="登录" className="top"/>
+            <ButtonItem href="/regist/regist" text="注册" className="ghost botton"/>
 
 
         </>
