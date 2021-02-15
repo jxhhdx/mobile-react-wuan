@@ -8,7 +8,7 @@ function Home(props) {
         <>
             <div className="main">
                 <div className="main-weekly">第276周</div>
-                <div onClick className="main-group"> Web前端组 12112</div>
+                <div className="main-group"> Web前端组 12112</div>
                 <Time />
                 <ButtonItem href="/submit/submit" text="提交周报" className="white main-submit" /> 
                 <ButtonItem href="/leave/leave" text="我要请假" className="none main-leave"/> 

@@ -4,7 +4,7 @@ function Head(props) {
     
     return (
         <div className="head">
-            { isBack===undefined?<i className="iconfont icon-left" onClick={()=>{ history.back() }}/> : "" }
+            { isBack===undefined?<i className="iconfont icon-left" onClick={()=>{ history.back() }}/> : false }
             <span>{ title }</span>
         </div>
     )

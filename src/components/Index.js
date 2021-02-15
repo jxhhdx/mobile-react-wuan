@@ -11,7 +11,7 @@ function Index(props) {
             let isActive =  (active == num);
             const router = useRouter()
             return (
-                <div className="index-item" key={num} onClick={()=>{ !isActive?router.push(item.href):"" }}>
+                <div className="index-item" key={num} onClick={()=> !isActive?router.push(item.href): "" }>
                     <img src={ isActive ? `/home/_${item.src}` : `/home/${item.src}` } />
                     <span className={ isActive? "active" : "" }>{ item.text }</span>
                 </div>
