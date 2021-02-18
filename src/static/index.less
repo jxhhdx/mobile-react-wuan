@@ -201,8 +201,11 @@ html, body, #__next{
             font-size: 18px;
             font-weight: bold;
         }
-        .group-item {
+        span {
             color: rgb(117, 117, 117);
+        }
+        .group-item {
+            color: #6cb3af;
             font-size: 16px;
             padding: 8px 20px;
             display: flex;
@@ -211,6 +214,40 @@ html, body, #__next{
                 color: #8fc0a8;
                 font-size: 20px;
             }
+        }
+        .group-active {
+            background-color: rgb(242, 250, 249);
+        }
+    }
+}
+.weekly-content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #ffffff;
+    .weekly-img {
+        width: 200px;
+        height: 60px;
+        margin-top: 60px;
+    }
+    .weekly-content2{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        .p{
+            font-size: 15px;
+            color: rgb(103, 176, 172);
+            font-weight: bold;
+        }
+        .name {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .weekly-text{
+            min-height: 80px;
+            color: #757575!important;
+            font-size: 14px!important;
         }
     }
 }

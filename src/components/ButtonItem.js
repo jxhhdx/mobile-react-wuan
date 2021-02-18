@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 
 function ButtonItem(props) {
-    let { text, className : cn, href  } = props
+    let { text, className : cn, href, bind  } = props
     if(!cn){
         cn = "primary"
     } 
@@ -11,7 +11,7 @@ function ButtonItem(props) {
     const router = useRouter()
     return (
         <div className="button-item">
-            <div onClick={()=>{ href?router.push(href):"" }} className={ cn }>{ text }</div>
+            <div onClick={()=>{ href?router.push(href):(bind?bind():'') }} className={ cn }>{ text }</div>
         </div>
     )
     

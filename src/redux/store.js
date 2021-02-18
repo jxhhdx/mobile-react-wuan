@@ -1,40 +1,52 @@
 import { useMemo } from 'react'
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware,combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import thunkMiddleware from 'redux-thunk'
-import { combineReducers } from "redux";
-const testReducer = (state = { test:0 }, { type, test })=>{
-    switch (type) {
-        case 'TEST':
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+let store
+const loginInfoInitialState = {
+    data: {},
+    email: ''
+}
+const loginInfo = (state=loginInfoInitialState, action) => {
+    switch (action.type) {
+        case 'USER_INFO_INIT':
             return {
                 ...state,
-                test: state.test+1
+                data: action.data
+            }
+        case 'CACHE_EMAIL':
+            return {
+                ...state,
+                email: action.email
             }
         default:
-            return state;
+            return { ...state };
     }
 }
 const reducers = combineReducers({
-    test: testReducer
+    loginInfo
 })
-
-let store
-// 初始化store
-function initStore(initialState) {
+const persistConfig = {
+    key: 'primary',
+    storage,
+    whitelist: ['data', 'loginInfo', 'email'], // place to select which state you want to persist
+}
+const persistedReducer = persistReducer(persistConfig, loginInfo)
+function makeStore(initialState = loginInfoInitialState) {
     return createStore(
-        reducers,
+        persistedReducer,
         initialState,
-        composeWithDevTools(applyMiddleware(thunkMiddleware))
+        composeWithDevTools(applyMiddleware())
     )
 }
-
 export const initializeStore = (preloadedState) => {
-    // store 如果没有被初始化，则使用 initStore 初始化的值
-    let _store = store ?? initStore(preloadedState)
+    let _store = store ?? makeStore(preloadedState)
 
-    // 如果预加载的 state 或者
+    // After navigating to a page with an initial Redux state, merge that state
+    // with the current state in the store, and create a new store
     if (preloadedState && store) {
-        _store = initStore({
+        _store = makeStore({
             ...store.getState(),
             ...preloadedState,
         })
@@ -42,14 +54,13 @@ export const initializeStore = (preloadedState) => {
         store = undefined
     }
 
-    // 对于 SSG 和 SSR 始终创建一个新的 store
+    // For SSG and SSR always create a new store
     if (typeof window === 'undefined') return _store
-    // 如果 store 不存在，使用 _store 的值
+    // Create the store once in the client
     if (!store) store = _store
 
     return _store
 }
-
 export function useStore(initialState) {
     const store = useMemo(() => initializeStore(initialState), [initialState])
     return store

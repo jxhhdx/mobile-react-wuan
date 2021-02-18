@@ -1,23 +1,22 @@
+import { useState } from "react";
 function InputItem(props) {
-    const { title,noTitle, placeholder, type, className, clear } = props
-    const cn  = className ? className : "";
-    console.log("clear", clear);
-    function selectInputType(params="text") {
-        switch (params) {
-            case "password":
-                return <input type="password" placeholder={placeholder} />;
-            case "text":
-                return <input type="text" placeholder={placeholder} />;
-            default:
-                return <input type={ params } placeholder={placeholder} />;
-        }
+    const { title, noTitle, placeholder, type, className, clear, bind } = props
+    const cn = className ? className : "";
+    const [val, setVal] = useState("")
+    const model = (event) => {
+        setVal(event.target.value);
+        typeof bind == 'function' ? bind(event.target.value) : ''
+    }
+    function selectInputType(params = "text") {
+        // params: password、text、other
+        return <input type={params} placeholder={placeholder} value={val} onChange={model} />;
     }
     return (
         <div className={"conponent-input " + cn}>
-            
-            {noTitle===undefined||noTitle==false?<div>{title}</div>:<span> </span>}
-            { selectInputType(type) }
-            {clear===true ? <i className="iconfont icon-clear"/>:"" }
+
+            {noTitle === undefined || noTitle == false ? <div>{title}</div> : <span> </span>}
+            { selectInputType(type)}
+            {clear === true ? <i className="iconfont icon-clear" /> : ""}
         </div>
     )
 
